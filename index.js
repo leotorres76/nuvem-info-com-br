@@ -1,6 +1,7 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 const Lead = require('./models/Lead');
+const ip = require('ip');
 
 const app = express ();
 
@@ -26,11 +27,17 @@ app.get('/como-criar-lgpd', (req, res) => {
     res.sendFile(__dirname + '/public/como-criar-lgpd.html');
 });
 
+app.get('/obrigado', (req, res) => {
+    res.sendFile(__dirname + '/public/obrigado.html');
+});
+
 app.post('/leads', (req, res) => {
     const name = req.body.lead.name; //pega o campo name do form
     const email = req.body.lead.email; //pega o campo email do form
-	const lead = Lead.create({ name, email }); //cria no firebase com a função Lead
-	res.send('Obrigado!'); //aqui devolve algo depois de gravar no firebase pode ser a pagina de obrigado.html ou msg na mesma pagina
+    const ipAddress = req.connection.remoteAddress; //armazena o ip
+	const date = new Date(Date.now()).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }); // armazena a data
+	const lead = Lead.create({ name, email, ipAddress, date }); //cria no firebase com a função Lead
+	res.sendFile(__dirname + '/public/obrigado.html'); //aqui devolve algo depois de gravar no firebase pode ser a pagina de obrigado.html ou msg na mesma pagina
 });
 
 app.get('/leads.csv', (req, res) =>{
