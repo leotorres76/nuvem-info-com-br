@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .cls-1{fill:#fff}
+        </style>
+    </defs>
+    <path id="facebook_branco" d="M15 0a15 15 0 1 0 15 15A15 15 0 0 0 15 0zm3.956 13.661l-.129 1.4h-2.638v8.879h-3.554v-8.892h-1.779v-3.554h1.765V9.887a3.469 3.469 0 0 1 3.75-3.726h2.746v3.056h-2a.744.744 0 0 0-.774.854v1.422h2.813z" class="cls-1"/>
+</svg>

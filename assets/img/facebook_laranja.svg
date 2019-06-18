@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .cls-1{fill:#f78229}
+        </style>
+    </defs>
+    <path id="facebook_laranja" d="M23.584 8.59A15 15 0 1 0 38.59 23.584 15 15 0 0 0 23.584 8.59zm3.956 13.646l-.13 1.4h-2.637v8.884h-3.552v-8.886h-1.777V20.08h1.765v-1.607a3.465 3.465 0 0 1 3.738-3.725h2.742v3.042H25.7a.753.753 0 0 0-.784.854v1.423h2.824z" class="cls-1" transform="translate(-8.59 -8.59)"/>
+</svg>
