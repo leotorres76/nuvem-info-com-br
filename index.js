@@ -38,7 +38,7 @@ app.get('/obrigado', (req, res) => {
 app.post('/leads', (req, res) => {
     const name = req.body.lead.name; //pega o campo name do form
     const email = req.body.lead.email; //pega o campo email do form
-    const ipAddress = req.connection.remoteAddress; //armazena o ip
+    const ipAddress = req.header('x-forwarded-for') || req.connection.remoteAddress; //armazena o ip
 	const date = new Date(Date.now()).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }); // armazena a data
 	const lead = Lead.create({ name, email, ipAddress, date }); //cria no firebase com a função Lead
 	res.sendFile(__dirname + '/public/obrigado.html'); //aqui devolve algo depois de gravar no firebase pode ser a pagina de obrigado.html ou msg na mesma pagina
