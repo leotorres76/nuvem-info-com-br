@@ -27,6 +27,10 @@ app.get('/como-criar-lgpd', (req, res) => {
     res.sendFile(__dirname + '/public/como-criar-lgpd.html');
 });
 
+app.get('/lista', (req, res) => {
+    res.sendFile(__dirname + '/public/lista.html');
+});
+
 app.get('/obrigado', (req, res) => {
     res.sendFile(__dirname + '/public/obrigado.html');
 });
