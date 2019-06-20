@@ -79,7 +79,21 @@ app.get('/obrigado', (req, res) => {
 app.post('/leads', (req, res) => {
     const name = req.body.lead.name; //pega o campo name do form e leva pro Lead.js
     const email = req.body.lead.email; //pega o campo email do form e leva pro Lead.js
-    const ipAddress = getIp(ip);
+    //const ipAddress = getIp(ip);
+    var ipAddress;
+    // The request may be forwarded from local web server.
+    var forwardedIpsStr = req.header('x-forwarded-for'); 
+    if (forwardedIpsStr) {
+      // 'x-forwarded-for' header may return multiple IP addresses in
+      // the format: "client IP, proxy 1 IP, proxy 2 IP" so take the
+      // the first one
+      var forwardedIps = forwardedIpsStr.split(',');
+      ipAddress = forwardedIps[0];
+    }
+    if (!ipAddress) {
+      // If request was not forwarded
+      ipAddress = req.connection.remoteAddress;
+    }
 	const date = new Date(Date.now()).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }); // pega a data e leva pro Lead.js
 	const lead = Lead.create({ name, email, ipAddress, date }); //cria no firebase com a função Lead
 	res.sendFile(__dirname + '/public/obrigado.html'); //aqui devolve algo depois de gravar no firebase pode ser a pagina de obrigado.html ou msg na mesma pagina
