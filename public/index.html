@@ -18,50 +18,46 @@
     <link href="font/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/shortcodes/shortcodes.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+
     <!--getIp Script-->
-    <script language="javascript" >
-		
-        function getIp(callback)
-{
-    function response(s)
-    {
-        callback(window.userip);
+    <script language="javascript">
 
-        s.onload = s.onerror = null;
-        document.body.removeChild(s);
-    }
+        function getIp(callback) {
+            function response(s) {
+                callback(window.userip);
 
-    function trigger()
-    {
-        window.userip = false;
+                s.onload = s.onerror = null;
+                document.body.removeChild(s);
+            }
 
-        var s = document.createElement("script");
-        s.async = true;
-        s.onload = function() {
-            response(s);
-        };
-        s.onerror = function() {
-            response(s);
-        };
+            function trigger() {
+                window.userip = false;
 
-        s.src = "https://l2.io/ip.js?var=userip";
-        document.body.appendChild(s);
-    }
+                var s = document.createElement("script");
+                s.async = true;
+                s.onload = function () {
+                    response(s);
+                };
+                s.onerror = function () {
+                    response(s);
+                };
 
-    if (/^(interactive|complete)$/i.test(document.readyState)) {
-        trigger();
-    } else {
-        document.addEventListener('DOMContentLoaded', trigger);
-    }
-}
+                s.src = "https://l2.io/ip.js?var=userip";
+                document.body.appendChild(s);
+            }
 
-getIp(function (ip) {
-    document.getElementById("myIp").value = ip;
-});
+            if (/^(interactive|complete)$/i.test(document.readyState)) {
+                trigger();
+            } else {
+                document.addEventListener('DOMContentLoaded', trigger);
+            }
+        }
 
-</script>
-<!--Fim função getIp-->
+        getIp(function (ip) {
+            document.getElementById("myIp").value = ip;
+        });
+
+    </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142142994-1"></script>
@@ -126,7 +122,7 @@ getIp(function (ip) {
 https://www.facebook.com/tr?id=619864325201514&ev=PageView&noscript=1
 " /></noscript>
     <!-- End Facebook Pixel Code -->
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:900&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -154,109 +150,66 @@ https://www.facebook.com/tr?id=619864325201514&ev=PageView&noscript=1
 
     <section class="section-padding" style="padding-top: 60px !important;">
         <div class="container">
-            <h1 style="font-size: 20px;">TUDO SOBRE SERVIÇOS EM NUVEM E BANCO DE DADOS</h1>
+            <div class="col-md-12" style="margin: 20px 0;">
+                <img src="/img/banner_nuvem_info.png" class="img-responsive" alt="" style="width: 100%;">
+            </div>
             <div class="row">
                 <div class="col-md-9">
-                    <div class="col-md-6">
-                        <div class="posts-content default-blog">
-                            <article class="post-wrapper">
+                    <div class="col-md-12">
+                        <article>
+                            <h1 style="margin-bottom:0"><a href="/computacao-em-nuvem"
+                                    style="color: #000;font-size: 24px;text-transform: uppercase;font-family: lato;">O
+                                    que é Computação em Nuvem (Cloud Computing)?</a></h1>
+                            <spam style="font-size: 16px; opacity: 0.5;">Publicado em 16 de Junho de 2019</spam>
+                            <img src="/img/post-computacao-nuvem.jpg" class="img-responsive" alt=""
+                                style="margin-top: 19px;">
+                            <div>
+                                <p style="font-size: 16px;">A computação em nuvem está se tornando uma realidade
+                                    no dia a dia das empresas e universidades, pois vem como uma promessa de
+                                    aumentar a eficiência do uso de servidores, possibilitando uma melhor
+                                    distribuição da capacidade computacional. </p>
+                                <a class="waves-effect waves-light btn" href="/computacao-em-nuvem"
+                                    style="background-color: #EA7B25; border: 0 !important">ver mais</a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-12" style="margin-top: 55px;">
+                        <div>
+                            <article>
+                                <h1 style="margin-bottom: 0;"><a href="/o-que-e-lgpd"
+                                        style="color: #000;font-size: 24px;text-transform: uppercase;font-family: lato;">Entendendo
+                                        a LGPD Lei Geral de Proteção de Dados</a></h1>
+                                <spam style="font-size: 16px; opacity: 0.5;">Publicado em 16 de Junho de 2019</spam>
+                                <img src="img/o_que_e_lgpd.jpg" class="img-responsive" alt="" style="margin-top: 19px;">
                                 <div>
-                                    <img src="/img/post-computacao-nuvem.jpg" class="img-responsive" alt="">
-                                    <div>
-                                        <h4><a href="/computacao-em-nuvem" style="color: #EA7B25; font-size: 20px;">O
-                                                que é Computação em Nuvem (Cloud Computing)?</a></h4>
-                                        <p style="font-size: 16px;">A computação em nuvem está se tornando uma realidade
-                                            no dia a dia das empresas e universidades, pois vem como uma promessa de
-                                            aumentar a eficiência do uso de servidores, possibilitando uma melhor
-                                            distribuição da capacidade computacional. </p>
-                                        <a class="waves-effect waves-light btn" href="/computacao-em-nuvem"
-                                            style="background-color: #EA7B25; border: 0 !important">Veja mais</a>
-                                    </div>
-
+                                    <p style="font-size: 16px;">Você acha que está protegido na Internet?
+                                        E os seus dados?
+                                        Já imaginou se a equipe de campanha de algum candidato tivesse acesso a seus
+                                        dados pessoais?
+                                    </p>
+                                    <a class="waves-effect waves-light btn" href="/o-que-e-lgpd"
+                                        style="background-color: #EA7B25; border: 0 !important">ver mais</a>
+                                </div>
                             </article>
-
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="posts-content default-blog">
-                            <article class="post-wrapper">
+                    <div class="col-md-12" style="margin-top: 55px;">
+                        <div>
+                            <article>
+                                <h1 style="margin-bottom: 0;"><a href="/como-criar-lgpd"
+                                        style="color: #000;font-size: 24px;text-transform: uppercase;font-family: lato;">Mudanças
+                                        com a LGPD no Brasil</a></h1>
+                                <spam style="font-size: 16px; opacity: 0.5;">Publicado em 16 de Junho de 2019</spam>
+                                <img src="img/como_criar_lgpd.jpg" class="img-responsive" alt="">
                                 <div>
-                                    <img src="img/o_que_e_lgpd.jpg" class="img-responsive" alt="">
-                                    <div>
-                                        <h4><a href="/o-que-e-lgpd" style="color: #EA7B25; font-size: 20px;">Entendendo
-                                                a LGPD Lei Geral de Proteção de Dados</a></h4>
-                                        <p style="font-size: 16px;">Você acha que está protegido na Internet?
-                                            E os seus dados?
-                                            Já imaginou se a equipe de campanha de algum candidato tivesse acesso a seus
-                                            dados pessoais?
-                                        </p>
-                                        <a class="waves-effect waves-light btn" href="/o-que-e-lgpd"
-                                            style="background-color: #EA7B25; border: 0 !important">Veja mais</a>
-                                    </div>
-
-                            </article>
-
-                        </div>
-                    </div>
-                    <div class=" col-md-12 center" style="background-color: #EA7B25; margin-bottom: 40px">
-                        <h2 style="color: #fff">VOCÊ JÁ VAI? :( <br>
-                            Assine a newsletter e receba E-BOOK EXCLUSIVO com "LGPD: onde a lei pode me afetar?"</h2>
-                        <form action="/leads" method="POST">
-                            <div class="input-field col-md-6">
-                                <input id="nome" required name="lead[name]" placeholder=" Nome completo" type="text"
-                                    class="validate" style="background-color:#fff !important;">
-                            </div>
-                            <div class="input-field col-md-6">
-                                <input id="email" required name="lead[email]" placeholder=" E-mail" type="email" class="validate"
-                                    style="background-color:#fff !important;">
-                            </div>
-                            <div class="col-md-12" style="text-align: center">
-                                <input id="myIp" name="lead[myIp]" type="hidden" value="">
-                                <button type="submit" class="waves-effect waves-light btn"
-                                    style="background-color: #ffff00; color: #000; border: 0 !important; margin: 10px;"><b>Enviar</b></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="posts-content default-blog">
-                            <article class="post-wrapper">
-                                <div>
-                                    <img src="img/como_criar_lgpd.jpg" class="img-responsive" alt="">
-                                    <div>
-                                        <h4><a href="/como-criar-lgpd" style="color: #EA7B25; font-size: 20px;">Mudanças
-                                                com a LGPD no Brasil</a>
-                                        </h4>
-                                        <p style="font-size: 16px;">Mas afinal, o que são dados?<br>
-                                            Baseando-se em parte da definição disposta no dicionário da língua
-                                            portuguesa - definida por: “Conhecimento que se tem sobre algo, usado para
-                                            solucionar uma questão, fazer um julgamento, criar ou colocar em prática um
-                                            pensamento, uma opinião.</p>
-                                        <a class="waves-effect waves-light btn" href="/como-criar-lgpd"
-                                            style="background-color: #EA7B25; border: 0 !important">Veja mais</a>
-                                    </div>
-
-                            </article>
-
-                        </div>
-                    </div>
-
-                      <div class="col-md-6">
-                        <div class="posts-content default-blog">
-                            <article class="post-wrapper">
-                                <div>
-                                    <img src="img/lgpd-seguros.jpg" class="img-responsive" alt="">
-                                    <div>
-                                        <h4><a href="/lgpd-seguros" style="color: #EA7B25; font-size: 20px;">Oportunidades com a LGPD</a>
-                                        </h4>
-                                        <p style="font-size: 16px;">Oportunidades que a LGPD abrirá para o Corretor de Seguros.<br>
-                                            A sigla LGPD é adotada para designar a Lei Geral de Proteção de Dados (Lei nr 13.709), 
-                                            que foi sancionada em 14 de agosto de 2018 e que entra em vigor a partir de fevereiro de 2020. 
-                                            Seu principal objetivo é garantir transparência no uso dos dados das pessoas físicas em quaisquer meios. 
-                                            Esta lei chega para alterar a Lei nr 12.965, de 23 de abril de 2014, 
-                                            popularmente chamada de Marco Civil da Internet que regulava estas transações até então.</p>
-                                        <a class="waves-effect waves-light btn" href="/lgpd-seguros"
-                                            style="background-color: #EA7B25; border: 0 !important">Veja mais</a>
-                                    </div>
+                                    <p style="font-size: 16px;">Mas afinal, o que são dados?<br>
+                                        Baseando-se em parte da definição disposta no dicionário da língua
+                                        portuguesa - definida por: “Conhecimento que se tem sobre algo, usado para
+                                        solucionar uma questão, fazer um julgamento, criar ou colocar em prática um
+                                        pensamento, uma opinião.</p>
+                                    <a class="waves-effect waves-light btn" href="/como-criar-lgpd"
+                                        style="background-color: #EA7B25; border: 0 !important">Ver mais</a>
+                                </div>
 
                             </article>
 
@@ -265,73 +218,174 @@ https://www.facebook.com/tr?id=619864325201514&ev=PageView&noscript=1
                 </div>
                 <div class="col-md-3">
                     <div class="tt-sidebar-wrapper">
-                        <div class="" style="background-color: #EA7B25; margin-bottom: 40px; text-align: center">
+                        <div class="" style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;">
                             <div class="col-md-12">
-                                <h4 style="color: #fff; text-align: center">Assine e receba dicas e novidades
-                                </h4>
+                                <h1
+                                    style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                    Newsletter </h1>
+                                <spam>Preencha os campos abaixo e receba dicas e novidades</spam>
                             </div>
                             <form action="/leads" method="POST">
                                 <div class="input-field col-md-12">
-                                    <input id="nomepg" required name="lead[name]" placeholder=" Nome completo" type="text"
-                                        class="validate" style="background-color:#fff !important;">
+                                    <input id="nomepg" required name="lead[name]" placeholder=" NOME COMPLETO"
+                                        type="text" class="validate" style="background-color:#fff !important;">
                                 </div>
                                 <div class="input-field col-md-12">
-                                    <input id="emailpg" required name="lead[email]" placeholder=" E-mail" type="email"
-                                        class="validate" style="background-color:#fff !important;">
+                                    <input id="emailpg" required name="lead[email]" placeholder=" SEU MELHOR E-MAIL"
+                                        type="email" class="validate" style="background-color:#fff !important;">
                                 </div>
                                 <input id="myIp" name="lead[myIp]" type="hidden" value="">
                                 <button type="submit" class="waves-effect waves-light btn"
-                                    style="background-color: #ffff00; color: #000; border: 0 !important; margin: 10px; text-align: center"><b>Enviar</b></button>
+                                    style="background-color: #F78229;color: #fff;border: 0 !important;margin: 10px;text-align: center;margin-bottom: 45px;width: 88%;"><b>quero
+                                        receber!</b></button>
                             </form>
                         </div>
-                        <div class="widget widget_categories">
-                            <h3>Últimos posts</h3>
+                        <div class="col-md-12"
+                            style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;height: 100%;">
+
+                            <h1
+                                style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                PUBLICAÇÕES RECENTES
+                            </h1>
                             <ul>
-                                <li><a href="/computacao-em-nuvem">O que é Computação em Nuvem (Cloud Computing)?</a>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/computacao-em-nuvem" style="color: #000;"> O que é Computação
+                                                    em Nuvem (Cloud Computing)?</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="/o-que-e-lgpd">Entendendo a LGPD Lei Geral de Proteção de Dados</a></li>
-                                <li><a href="/como-criar-lgpd">Mudanças com a LGPD no Brasil</a></li>
-                                <li><a href="/lgpd-seguros">Oportunidades que a LGPD abrirá para o Corretor de Seguros</a></li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/o-que-e-lgpd" style="color: #000;"> Entendendo a LGPD Lei
+                                                    Geral de Proteção de Dados</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/como-criar-lgpd" style="color: #000;"> Mudanças com a LGPD no
+                                                    Brasil</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/lgpd-seguros" style="color: #000;"> Oportunidades que a LGPD
+                                                    abrirá para o Corretor de Seguros</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
-                        </div><!-- /.widget_categories -->
+                        </div>
                     </div><!-- /.tt-sidebar-wrapper -->
+                </div>
+                <div class="col-md-12">
+                    <ul class="pagination post-pagination text-center mt-50">
+
+                        <li><span class="current waves-effect waves-light">1</span></li>
+                        <li><a href="/pag-2" class="waves-effect waves-light">2</a></li>
+                        <li><a href="/pag-3" class="waves-effect waves-light">3</a></li>
+                    </ul>
                 </div>
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>
 
     <footer class="footer footer-four" style="background-color: #EA7B25;">
+        <div style="background-color: #333">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container" style="margin: 60px;">
+                        <div class="col-md-6" style="text-align: left;">
+                            <h1
+                                style="color: #F78229;font-family: lato; font-size: 24px;margin-top: 0;text-transform: uppercase;">
+                                Newsletter</h1>
+                            <h2 style="color: #FFF;font-size: 20px;">Preencha os campos abaixo e receba <br> nossa
+                                newsletter com dicas e novidades</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="/leads" method="POST">
+                                <div class="input-field col-md-6">
+                                    <input id="nomepg" required name="lead[name]" placeholder=" Nome completo"
+                                        type="text" class="validate" style="background-color:#fff !important;">
+                                </div>
+                                <div class="input-field col-md-6">
+                                    <input id="emailpg" required name="lead[email]" placeholder=" E-mail" type="email"
+                                        class="validate" style="background-color:#fff !important;">
+                                    <input id="myIp" name="lead[myIp]" type="hidden" value="">
+                                </div>
+                                <div class="input-field col-md-12">
+                                    <button type="submit" class="waves-effect waves-light btn"
+                                        style="background-color: #F78229;color: #FFF;border: 0 !important;margin-top: 18px;width: 100%;"><b>QUERO
+                                            RECEBER!</b></button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <div class="primary-footer brand-bg text-center">
             <div class="container">
-
                 <a href="#top"
                     class="page-scroll btn-floating btn-large back-top waves-effect waves-light tt-animate btt"
                     style="background-color: #333" data-section="#top">
                     <i class="fa fa-chevron-up"></i>
                 </a>
-                <a href="malito:contato@nuveminfo.com.br">
-                    <p style="margin-top: 10px; color: #fff">contato@nuveminfo.com.br </p>
-                </a>
-                <ul class="social-link tt-animate ltr mt-20">
-                    <li><a href="https://www.facebook.com/nuveminfoblog/"><img src="img/facebook_branco.svg"
-                                class="facebook_branco"></a></li>
-                    <li><a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"><img
-                                src="img/001-instagram.svg" class="-instagram"></a></li>
-                </ul>
+                <div class="col-md-12" style="margin: 60px 0 60px 0;">
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">CONTATO</h1>
+                        <a href="malito:contato@nuveminfo.com.br" style="font-size: 18px; margin-top: 21px;">
+                            <p style="margin-top: 10px; color: #fff">contato@nuveminfo.com.br </p>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">SIGA-NOS NAS REDES SOCIAIS</h1>
+                        <ul class="social-link tt-animate ltr mt-20">
+                            <li><a href="https://www.facebook.com/nuveminfoblog/"><img src="img/facebook_branco.svg"
+                                        class="facebook_branco"></a></li>
+                            <li><a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"><img
+                                        src="img/001-instagram.svg" class="-instagram"></a></li>
+                        </ul>
+                    </div>
 
-                <hr class="mt-15">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-logo">
-                            <img src="img/logo_nuvem_wt.png" alt="" style="width: 20%;">
-                        </div>
-
-                        <span class="copy-text">Nuvem Info 2019 - Todos os direitos reservados</span>
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
+                    <div class="col-md-4" style="text-align: center;">
+                        <img src="img/logo_nuvem_wt.png" alt="" style="width: 55%;margin-top: 23px;">
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-bottom: 10px;">
+                    <span class="copy-text" style="color: #fff !important;">Nuvem Info 2019 - Todos os direitos
+                        reservados</span>
+                </div><!-- /.col-md-12 -->
+                <!-- /.row -->
             </div><!-- /.container -->
-        </div><!-- /.primary-footer -->
+        </div>
 
 
     </footer>
