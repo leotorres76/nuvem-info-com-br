@@ -43,7 +43,6 @@ app.post('/leads', (req, res) => {
     const name = req.body.lead.name; //pega o campo name do form e leva pro Lead.js
     const email = req.body.lead.email; //pega o campo email do form e leva pro Lead.js
     const ipAddress = req.body.lead.myIp; //pega o ip pela função getIp do index.html
-    const tipo = ''; //campo criado apenas para preenchimento manual posteriormente no csv
 	const date = new Date(Date.now()).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' }); // pega a data e leva pro Lead.js
 	const lead = Lead.create({ name, email, ipAddress, date }); //cria no firebase com a função Lead
 	res.sendFile(__dirname + '/public/obrigado.html'); //aqui devolve algo depois de gravar no firebase pode ser a pagina de obrigado.html ou msg na mesma pagina
