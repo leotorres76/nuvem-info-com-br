@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Saiba tudo sobre o uso e funcionamento das plataformas e serviços de Cloud Computing, e respostas às principais perguntas sobre os Serviços em Nuvem para empresas.">
+    <meta name="keywords"
+        content="cloud computing, serviços em nuvem, armazenamento em nuvem,
+        cloud, nuvem para empresas, na nuvem, computação em nuvem, cloud hosting,
+        software as a servisse, futuro da computação, avanços do cloud computing, tecnologia
+        da informação, data center">
+    <meta name=google-site-verification content="Pl7jp9kxbZyjFAA4LbySgiwzyoE0PuKAejOr2mLb97s">
+
+    <title>O avanço do Cloud Computing nas empresas | Blog Nuvem Info</title>
+
+    <link rel="shortcut icon" href="img/ico/favicon.png">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/shortcodes/shortcodes.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!--getIp Script-->
+    <script language="javascript">
+
+        function getIp(callback) {
+            function response(s) {
+                callback(window.userip);
+
+                s.onload = s.onerror = null;
+                document.body.removeChild(s);
+            }
+
+            function trigger() {
+                window.userip = false;
+
+                var s = document.createElement("script");
+                s.async = true;
+                s.onload = function () {
+                    response(s);
+                };
+                s.onerror = function () {
+                    response(s);
+                };
+
+                s.src = "https://l2.io/ip.js?var=userip";
+                document.body.appendChild(s);
+            }
+
+            if (/^(interactive|complete)$/i.test(document.readyState)) {
+                trigger();
+            } else {
+                document.addEventListener('DOMContentLoaded', trigger);
+            }
+        }
+
+        getIp(function (ip) {
+            document.getElementById("myIp").value = ip;
+        });
+
+    </script>
+    <!--Fim função getIp-->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142142994-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142142994-1', { 'optimize_id': 'GTM-TPM3GJN' });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142142994-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-142142994-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-TKN9352');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Hotjar Tracking Code for http://nuveminfo.com.br -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 1366411, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:900&amp;display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKN9352" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header id="header" class="tt-nav nav-border-bottom">
+        <div class="header-sticky light-header">
+            <div class="container">
+                <div id="materialize-menu" class="menuzord">
+                    <a href="/" class="logo-brand" style="margin: 0 !important;">
+                        <img class="retina" src="img/logo_nuvem.png" alt=""
+                            style="height: 65px !important;margin-top: 15px;" />
+                    </a>
+
+                    <ul class="menuzord-menu pull-right">
+                        <li class="active"><a href="/">HOME</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding" style="padding-top: 60px !important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="col-md-12">
+                        <h1 style="margin-bottom:0"><a href="/avanco-cloud-empresas"
+                                style="color: #333333;font-size: 24px;text-transform: uppercase;font-family: lato;">O
+                                AVANÇO DO CLOUD COMPUTING NAS EMPRESAS</a></h1>
+                        <spam style="font-size: 16px; opacity: 0.5;">Publicado em 21 de Junho de 2019</spam>
+                        <img src="img/como-se-preparar.png" class="img-responsive"
+                            style="width: 100%; margin-top: 39px">
+                        <p style="font-size: 16px; line-height: 32px; margin-top: 22px">A computação em nuvem está se
+                            tornando uma realidade no dia a dia de empresas e universidades, pois vem como uma promessa
+                            de aumentar a eficiência do uso de servidores, possibilitando uma melhor distribuição da
+                            capacidade computacional. Esta melhoria ocorre quando a tecnologia acena com uma
+                            flexibilidade para o uso do poder computacional, oferecendo ele como serviço, e também se
+                            apresenta quando temos a capacidade de realocar esta estrutura de forma ágil em função de
+                            demandas, que variam ao longo do tempo.
+                            <br><br>
+                            A computação em nuvem é caracterizada pelo processamento e armazenamento de dados através da
+                            internet, utilizando recursos físicos e lógicos através de um provedor conectado à internet.
+                            Usuários poderão utilizar sistemas, ferramentas, acessar e armazenar dados alocados em
+                            dispositivos compartilhados, interligados, com alta-disponibilidade em qualquer lugar que
+                            tenha um equipamento com acesso a internet.
+                            <br>
+                            <h2 style="font-size: 18px;">Modelos de Serviços</h2>
+                            O ambiente de computação em nuvem é composto de três modelos de serviços. Estes modelos são
+                            importantes, pois eles determinam um padrão arquitetural para soluções de computação em
+                            nuvem.
+                            <br><br>
+                            Software como um Serviço (SaaS): SaaS proporciona sistemas de software com propósitos
+                            específicos que estão disponíveis para os usuários através da Internet.
+                            Plataforma como um Serviço (PaaS): Oferece uma infraestrutura de alto nível de integração,
+                            para implementar e testar aplicações na nuvem.
+                            Infraestrutura como um Serviço (IaaS): Tem como objetivo tornar mais fácil e acessível o
+                            fornecimento de recursos, tais como servidores, rede, armazenamento e outros recursos de
+                            computação fundamentais para construir um ambiente sob demanda, que podem incluir sistemas
+                            operacionais e aplicativos.
+                            <br><br>
+                            <h2 style="font-size: 18px;">Aplicações e Soluções em nuvem</h2>
+                            Neste mercado de Cloud Compuntig não faltam opções e modelos de serviço para ser
+                            comercializados como solução e empresas que oferecem este tipo de serviço. Para as
+                            organizações, isto é ótimo por causa da oferta de variedades de soluções disponíveis para
+                            cada tipo de necessidade e tamanho de empresa.
+                            Quando falamos de soluções e aplicações em nuvem, não podemos deixar de falar do Google,
+                            pois como relata o engenheiro do Google Brasil, Gioielli (2010): “O Google já nasceu na
+                            nuvem".<br>
+                            A cada dia nasce uma aplicação ou solução nova disponível na nuvem, abaixo relacionamos
+                            alguns serviços disponíveis: <br>
+                            Storage-as-a-service – Serviço de armazenamento.<br>
+                            Backup-as-a-service – Serviço de cópias de segurança.<br>
+                            Database-as-a-service – Serviço de banco de dados.<br>
+                            Application-as-a-service – Serviço de aplicação.<br>
+                            Security-as-a-service – Serviço de segurança.<br>
+                            E-mail- as-a-service – Correio Eletrônico<br>
+                            <br><br>
+                            <h2 style="font-size: 18px;">EMPRESAS</h2>
+                            Como a globalização e o avanço tecnológico trouxeram inúmeros obstáculos para as
+                            organizações, as empresas estão inseridas em um ambiente altamente competitivo e turbulento
+                            que, se transformam a todo instante com uma velocidade alucinante, exigindo das empresas um
+                            sistema de informação ágil que acompanhe o ritmo das transformações.
+                            <br><br>
+                            A busca por competitividade, através de redução de custos e ganhos de produtividade, está
+                            fazendo com que as organizações procurem por inovações tecnológicas que permitam uma
+                            vantagem competitiva.
+                            E devido essa busca de vantagem competitiva, as empresas visualizam a computação em nuvem
+                            como uma forma de suprir as necessidades de inovação e crescimento tecnológico de maneira
+                            prática e rápida.
+                            <br><br>
+                            Hoje em dia as empresas ainda mantém o famoso CPD – Central de Processamento de Dados ou
+                            Data Center como são mais conhecidos. Isso ainda ocorre por falta de conhecimento do novo
+                            modelo de negócio, algumas vezes também ocorre por medo, pelo seguinte fato da resistência
+                            dos profissionais de TI, que ainda tem em mente o fantasma que este novo modelo de negócio
+                            vem para ocupar seus lugares na empresa.
+                            Mas hoje, este pensamento está mudando, os executivos de TI e CIOS já veem esta nova
+                            tendência como o futuro da TI. Esses executivos não estão mais focados na parte técnica do
+                            departamento de TI e sim na gestão do negócio da empresa como um todo e assim, começam a
+                            visualizar hardware e software como parte estratégica de negócio da empresa. A realidade
+                            agora é pensar em como a Tecnologia da Informação vai participar das estratégias da
+                            organização provendo recursos, mobilidade, flexibilidade, segurança para o colaborador da
+                            empresa e disponibilizando ao usuário acesso aos recursos tecnológicos de forma fácil, ágil
+                            e eficiente, fazendo com que assim o colaborador tenha liberdade dentro do seu espaço físico
+                            na empresa.
+                            <br><br>
+                            Hoje podemos prover acesso aos recurso tanto interno ou externo:<br>
+                            Interno - Utilizar tecnologia de acesso remoto a distância, porém ainda utilizando um Data
+                            Center Interno com estrutura estilo Mobile Office, o colaborador acessa os recursos da
+                            empresa pela internet.
+                            Externo - Também se utiliza a internet para se conectar os recursos da empresa, porém a
+                            infraestrutura computacional está na nuvem e disponibilizado por algum provedor deste
+                            serviço como Amazon, Google e IBM, onde os recursos de TI estão alocados no provedor.
+                            <br><br>
+                            Com necessidades de crescimento e evolução tecnológica das empresas para poder manter a
+                            competitividade no mercado, este processo está atingindo cada vez mais as pequenas e médias
+                            empresas, pela facilidade de aquisição dos serviços.
+                            A escalabilidade é o maior benefício da computação em nuvem e com este resultado
+                            proporcionado pela cloud computing, as empresas conseguem reduzir custos e, ao mesmo tempo,
+                            ter acesso às mais recentes tecnologias e o mesmo consegue aumentar a produção, mantendo a
+                            qualidade e estabilidade.
+                            <br><br>
+                            <h2 style="font-size: 18px;">MOTIVOS PARA MIGRAÇÃO</h2>
+                            Como alternativa de redução de custos, a Cloud Computing surge para que as empresas invistam
+                            mais neste modelo de tecnologia, já que muitas destas empresas têm data centers que estão
+                            subaproveitados.
+                            Uma das propriedades da utilização da computação de nuvem é aproveitar de forma mais
+                            eficiente o uso da capacidade de um servidor, usufruindo o máximo de seus recursos.
+                            <br><br>
+                            Fora desse contexto, normalmente servidores são adquiridos de acordo com o que é definido em
+                            projetos, sem levar em consideração a utilização de recursos já disponíveis, onde geralmente
+                            são previstos para trabalharem de forma dedicada e
+                            com uma grande folga de recursos, o que significa que grande parte desses recursos não são
+                            utilizados. Por esse motivo, a virtualização se tornou um grande destaque, pois assim as
+                            empresas podem adquirir menos hardware e consolidam recursos computacionais para diversas
+                            aplicações diferentes em um único equipamento. Nesse conceito o uso da computação em nuvem é
+                            notada uma clara redução de custos.
+                            <br><br>
+                            <h2 style="font-size: 18px;">Investir na cloud computing</h2>
+                            A computação em nuvem traz benefícios significativos, apesar de alguns executivos de TI que
+                            vêm a utilização da computação em nuvem como mais uma terceirização, ou um provedor de
+                            infraestrutura de cloud computing. No entanto, é uma perspectiva que não leva em
+                            consideração o valor da utilização da computação em nuvens em um contexto global de
+                            estratégia voltada aos negócios.
+                            <br><br>
+                            Atualmente, não existem motivos para fugir deste modelo de serviços e sim várias razões para
+                            investir na Cloud Computing, que cada vez mais revoluciona o mundo da tecnologia.
+                            <br><br>
+                            Abaixo, podemos relacionar alguns motivos para se acreditar e investir na cloud computing:
+                            <br><br>
+                            CUSTO – Inexistência de investimentos na aquisição de servidores e licenças de softwares e
+                            redução de custos em infraestrutura de tecnologia como por exemplo: espaço físico, consumo
+                            de energia e equipamento como: ar-condicionado, dispositivos de segurança, entre outros...
+                            SEGURANÇA – Políticas de segurança dedicadas a trazer confiabilidade ao acesso das
+                            informações na nuvem.
+                            GESTÃO – A empresa possui propriedade exclusiva sobre a infraestrutura envolvida, fornecendo
+                            serviços internamente ou remotamente e administrada pela própria empresa ou por terceiros.
+                            SERVIÇOS: Ao contratar os serviços, o cliente conta com alguns diferenciais disponíveis no
+                            pacote como:
+                            Atendimento: Profissionais capacitados e com foco no modelo dos serviços contratados.
+                            SLA: pode ser negociado com nível de serviços comprado e pode ser exigido um percentual
+                            aceitável como alguns oferecidos de até 99,5%, para manter a disponibilidade dos serviços
+                            alocados. Além de evitar a atualização constante de equipamentos de informática no meio
+                            corporativo em busca de desempenho e agilidade, uma vez que aplicativos/documento trafegam
+                            na ―nuvemll, não há necessidade de substituir equipamentos desatualizados, que até após o
+                            descarte há necessidade de uma atenção especial para ser descartado, por causas dos seus
+                            componentes eletrônicos, que muitas vezes são descartados e jogados no meio ambiente por
+                            empresas que não se preocupam com o seu lixo eletrônico.
+                            <br><br>
+
+                            Uma observação importante a ser feita é o custo benefício para manter tecnologias como estas
+                            e com isso os gestores estão se voltando à computação em nuvem.
+                            <br><br>
+
+                            Abaixo, podemos relatar mais benefícios que deixam em evidência a forma de se trabalhar com
+                            a computação em nuvem:
+                            <br><br>
+
+                            Conveniência: Aquisição rápida de serviços de TI sob demanda disponível em uma base de
+                            autoatendimento que possui uma variedade de dispositivos de rede, possibilitado atender ao
+                            mercado em um tempo muito mais rápido.<br>
+                            Adaptação: Com o conceito de elasticidade, possibilita expandir ou reduzir a utilização dos
+                            serviços de TI conforme as necessidades forem surgindo e requeridas.<br>
+                            Inovação: Torna mais fácil a implementação de novos recursos, tendo menos riscos através de
+                            uma abordagem de repartição conhecido como utility computing.<br>
+                            Simplicidade: Reduzem a complexidade do ambiente de TI, eliminado elementos significativos e
+                            obtendo serviços com tecnologias padronizadas.<br>
+                            Baixo custo: O compartilhamento na utilização dos recursos de TI oferece um custo menor.<br>
+                            Transparência nos Custos: Oferece a capacidade de compreender, medir e gerir quem está
+                            usando quais recursos de TI e qual será o custo para o faturamento, possibilitando
+                            planejamento e otimização no uso.<br>
+                            QoS: Confiança em que recursos de IT das nuvens públicas e privadas serão mais confiáveis,
+                            disponíveis, escaláveis e seguros que os tradicionais, assim oferecendo uma maior qualidade
+                            de serviço.<br>
+                            Meio Ambiente - Fatores como consumo de energia e preservação do meio ambiente entram no
+                            foco da Cloud Computing.<br>
+                            <br><br>
+
+                            Além dos benefícios tecnológicos, outro ganho obtido com a migração para a nuvem é
+                            capacitação dos profissionais de TI envolvidos no projeto. Podemos realizar uma observação,
+                            que os benefícios só estão consolidados nas empresas graças à evolução da banda larga que
+                            acompanhou o crescimento da internet e seus recursos e serviços que utilizam a conexão de
+                            banda larga para operar. Por exemplo, o mercado de armazenamento na ―nuvem‖ — faz uma
+                            referência ao fato de que os arquivos não ficam em um aparelho físico — e se tornou viável
+                            graças ao uso de conexões de banda larga, que permitem o acesso à internet na mesma
+                            velocidade em que se acessa um arquivo.
+                            <br><br>
+
+                            <h2 style="font-size: 18px;">FUTURO DAS EMPRESAS</h2>
+                            Com o avanço do mercado neste estilo de negócio de TI, que será cada vez mais presente nas
+                            empresas, independente do tamanho ou necessidade, levará os Executivos de TI ou CIO a
+                            escolher a migração ou a compra deste modelo de serviço a partir de sua necessidade, que
+                            terá pontos fortes como, custo, gerenciamento e tempo de implementação, que abre mão da
+                            compra de hardware, licenças e espaço físico.
+                            <br><br>
+
+                            É uma forma muito mais robusta e diferenciada de oferta em Cloud Computing devido a
+                            disponibilização de recursos físicos, mesmo estando em ambiente alocado em outro espaço
+                            físico com acesso pela internet.
+                            <br><br>
+
+                            Mesmo não estando no ambiente interno, as empresas e organizações possuem o controle total
+                            sobre os recursos, incluindo Firewall Virtual, escolha de Sistemas Operacionais e a
+                            Configuração de Servidores Virtuais, memória, espaço em disco e processadores.
+                            <br><br>
+
+                            Alguns estudos realizados já apontam que a maioria das empresas já tem alguns dos seus
+                            sistemas a funcionar em modelo de cloud computing e de acordo com a ComputerWorld, o cloud
+                            computing já é utilizado por 81% das empresas de alguma forma.
+                            <br><br>
+
+                            Estudos e artigos realizados ao redor do mundo, em vários países, revela que os CIOS ou os
+                            Executivos de TI, estão a se adaptar ao cloud computing em força.
+
+
+                        </p>
+                    </div>
+
+                </div>
+                <div class="col-md-3">
+                    <div class="tt-sidebar-wrapper">
+                        <div class="col-md-12"
+                            style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;">
+                            <h1
+                                style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                Newsletter </h1>
+                            <spam>Preencha os campos abaixo e receba dicas e novidades</spam>
+
+                            <form action="/leads" method="POST">
+                                <div class="input-field col-md-12" style="margin-top: 30px;">
+                                    <input id="nomepg" required="" name="lead[name]" placeholder=" Nome completo"
+                                        type="text" class="validate" style="background-color:#fff !important;">
+                                </div>
+                                <div class="input-field col-md-12" style="margin-top: 0;">
+                                    <input id="emailpg" required="" name="lead[email]" placeholder=" E-mail"
+                                        type="email" class="validate" style="background-color:#fff !important;">
+                                </div>
+                                <input id="myIp" name="lead[myIp]" type="hidden" value="">
+                                <button type="submit" class="waves-effect waves-light"
+                                    style="background-color: #EA7B25;border: 0 !important;color: #fff;text-transform: uppercase;width: 200px;height: 33px;text-align: center;padding-top: 2px;font-weight: bold;margin-bottom: 40px;"><b>quero
+                                        receber!</b></button>
+                            </form>
+
+                            <div class="col-md-12" style="margin-bottom: 15px;">
+                                <h1
+                                    style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;font-size: 24px;MARGIN: 0;">
+                                    SIGA-NOS</h1>
+                                <a href="https://www.facebook.com/nuveminfoblog/"
+                                    style="font-size: 25px; color: #333333; margin: 10px;"><i
+                                        class=" fa fa-facebook"></i></a>
+                                <a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"
+                                    style="font-size: 25px; color: #333333; margin: 10px;"><i
+                                        class=" fa fa-instagram"></i></a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12"
+                            style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;height: 100%;">
+
+                            <h1
+                                style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                PUBLICAÇÕES RECENTES
+                            </h1>
+                            <ul>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/o-que-vai-mudar-no-marketing" style="color: #333333;"> LGPD: O que vai mudar no marketing?</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 21 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/avanco-cloud-empresas" style="color: #333333;"> O avanço do Cloud nas empresas</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 21 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/nova-lei-afeta-empresas" style="color: #333333;"> Como a nova lei de proteção de dados afeta o dia a dia das empresas</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 20 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/lgpd-seguros" style="color: #333333;"> Oportunidades que a LGPD
+                                                    abrirá para o Corretor de Seguros</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- /.tt-sidebar-wrapper -->
+                </div>
+            </div>
+            <div class="col-md-12" style="margin-top: 20px;">
+                <div class="col-md-6" style="text-align: right; padding: 0;">
+                    <h3>COMPARTILHE</h3>
+                </div>
+                <div class="col-md-6" style="margin-top: 15px; text-align: left">
+                    <a onclick="return popup(this, 'notes')" title="Compartilhar no Facebook"
+                        data-href="https://developers.facebook.com/docs/plugins/" class="fb-xfbml-parse-ignore"
+                        target="_blank"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://www.nuveminfo.com.br/avanco-cloud-empresas.html"><img
+                            src="img/facebook_laranja.svg" class="facebook_laranja"></a>
+                    <a onclick="return popup(this, 'notes')" title="Compartilhar no Linkedin"
+                        href="https://www.linkedin.com/shareArticle?mini=true&url=http://www.nuveminfo.com.br/avanco-cloud-empresas.html&title=NuvemInfo&summary=NuvemInfo&source=NuvemInfo"><img
+                            src="img/linkedin_laranja.svg" class="linkedin_laranja"></a>
+                    <a onclick="return popup(this, 'notes')" title="Compartilhar no Twitter"
+                        href="https://twitter.com/intent/tweet?hashtags=NuvemInfo&amp;original_referer=http://www.nuveminfo.com.br/avanco-cloud-empresas.html&amp;ref_src=twsrc%5Etfw&amp;&amp;tw_p=tweetbutton&amp;url=http://www.nuveminfo.com.br/avanco-cloud-empresas.html"><img
+                            src="img/twitter_laranja.svg" class="twitter_laranja"></a>
+                    <a target="_blank"
+                        href="https://api.whatsapp.com/send?text=*Saiba mais sobre a NuvemInfo:* http://www.nuveminfo.com.br/avanco-cloud-empresas.html"><img
+                            src="img/whatsapp_laranja.svg" class="whatsapp_laranja"></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer footer-four" style="background-color: #EA7B25;">
+        <div style="background-color: #333">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container" style="margin: 60px;">
+                        <div class="col-md-6" style="text-align: left;">
+                            <h1
+                                style="color: #F78229;font-family: lato; font-size: 24px;margin-top: 0;text-transform: uppercase;">
+                                Newsletter</h1>
+                            <h2 style="color: #FFF;font-size: 20px; line-height: 24px;">Preencha os campos abaixo e
+                                receba <br> nossa
+                                newsletter com dicas e novidades</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="/leads" method="POST">
+                                <div class="input-field col-md-6">
+                                    <input id="nomepg" required name="lead[name]" placeholder=" Nome completo"
+                                        type="text" class="validate" style="background-color:#fff !important;">
+                                </div>
+                                <div class="input-field col-md-6">
+                                    <input id="emailpg" required name="lead[email]" placeholder=" Seu melhor e-mail"
+                                        type="email" class="validate" style="background-color:#fff !important;">
+                                    <input id="myIp" name="lead[myIp]" type="hidden" value="">
+                                </div>
+                                <div class="input-field col-md-12">
+                                    <button type="submit" class="waves-effect waves-light"
+                                        style="background-color: #EA7B25;border: 0 !important;color: #fff;text-transform: uppercase;width: 100%;height: 33px;text-align: center;padding-top: 2px;font-weight: bold;margin-bottom: 40px;"><b>quero
+                                            receber!</b></button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="primary-footer brand-bg text-center">
+            <div class="container">
+                <a href="#top"
+                    class="page-scroll btn-floating btn-large back-top waves-effect waves-light tt-animate btt"
+                    style="background-color: #333" data-section="#top">
+                    <i class="fa fa-chevron-up"></i>
+                </a>
+                <div class="col-md-12" style="margin: 60px 0 60px 0;">
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">CONTATO</h1>
+                        <a href="malito:contato@nuveminfo.com.br" style="font-size: 18px; margin-top: 21px;">
+                            <p style="margin-top: 10px; color: #fff">contato@nuveminfo.com.br </p>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">SIGA-NOS NAS REDES SOCIAIS</h1>
+                        <ul class="social-link tt-animate ltr mt-20">
+                            <li><a href="https://www.facebook.com/nuveminfoblog/"><img src="img/facebook_branco.svg"
+                                        class="facebook_branco"></a></li>
+                            <li><a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"><img
+                                        src="img/001-instagram.svg" class="-instagram"></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4" style="text-align: center;">
+                        <img src="img/logo_nuvem_wt.png" alt="" style="width: 55%;margin-top: 23px;">
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-bottom: 10px;">
+                    <span class="copy-text" style="color: #fff !important;">Nuvem Info 2019 - Todos os direitos
+                        reservados</span>
+                </div><!-- /.col-md-12 -->
+                <!-- /.row -->
+            </div><!-- /.container -->
+        </div>
+
+
+    </footer>
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+
+    <script>
+        function popup(mylink, windowname) { if (!window.focus) return true; var href; if (typeof (mylink) == 'string') href = mylink; else href = mylink.href; window.open(href, windowname, 'width=640,height=480,scrollbars=yes'); return false; }
+    </script>
+
+</body>
+
+</html>

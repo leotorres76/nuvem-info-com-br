@@ -20,48 +20,45 @@
     <link href="css/style.css" rel="stylesheet">
 
     <!--getIp Script-->
-    <script language="javascript" >
-		
-        function getIp(callback)
-{
-    function response(s)
-    {
-        callback(window.userip);
+    <script language="javascript">
 
-        s.onload = s.onerror = null;
-        document.body.removeChild(s);
-    }
+        function getIp(callback) {
+            function response(s) {
+                callback(window.userip);
 
-    function trigger()
-    {
-        window.userip = false;
+                s.onload = s.onerror = null;
+                document.body.removeChild(s);
+            }
 
-        var s = document.createElement("script");
-        s.async = true;
-        s.onload = function() {
-            response(s);
-        };
-        s.onerror = function() {
-            response(s);
-        };
+            function trigger() {
+                window.userip = false;
 
-        s.src = "https://l2.io/ip.js?var=userip";
-        document.body.appendChild(s);
-    }
+                var s = document.createElement("script");
+                s.async = true;
+                s.onload = function () {
+                    response(s);
+                };
+                s.onerror = function () {
+                    response(s);
+                };
 
-    if (/^(interactive|complete)$/i.test(document.readyState)) {
-        trigger();
-    } else {
-        document.addEventListener('DOMContentLoaded', trigger);
-    }
-}
+                s.src = "https://l2.io/ip.js?var=userip";
+                document.body.appendChild(s);
+            }
 
-getIp(function (ip) {
-    document.getElementById("myIp").value = ip;
-});
+            if (/^(interactive|complete)$/i.test(document.readyState)) {
+                trigger();
+            } else {
+                document.addEventListener('DOMContentLoaded', trigger);
+            }
+        }
 
-</script>
-<!--Fim função getIp-->
+        getIp(function (ip) {
+            document.getElementById("myIp").value = ip;
+        });
+
+    </script>
+    <!--Fim função getIp-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142142994-1"></script>
@@ -105,6 +102,8 @@ getIp(function (ip) {
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
+    <link href="https://fonts.googleapis.com/css?family=Lato:900&amp;display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -123,7 +122,6 @@ getIp(function (ip) {
 
                     <ul class="menuzord-menu pull-right">
                         <li class="active"><a href="/">HOME</a></li>
-                        <li><a href="/lista">TODOS OS POSTS</a></li>
                     </ul>
                 </div>
             </div>
@@ -135,122 +133,194 @@ getIp(function (ip) {
             <div class="row">
                 <div class="col-md-9">
                     <div class="col-md-12">
-                        <img src="img/lgpd-seguros.jpg" class="img-responsive">
-                        <h1 style="font-size: 20px;">Oportunidades que a LGPD abrirá para o Corretor de Seguros</h1>
-                        <p style="font: 16px;">
-                            A sigla LGPD é adotada para designar a Lei Geral de Proteção de Dados (Lei nr 13.709), que foi sancionada em 14 de agosto de 2018 e que entra em vigor a partir de fevereiro de 2020. Seu principal objetivo é garantir transparência no uso dos dados das pessoas físicas em quaisquer meios. Esta lei chega para alterar a Lei nr 12.965, de 23 de abril de 2014, popularmente chamada de Marco Civil da Internet que regulava estas transações até então.
-                            Com a lei vigorando, abre-se uma ótima oportunidade para o corretor de seguros. As empresas terão responsabilidade com os dados fornecidos por pessoas físicas (clientes, fornecedores e funcionários). Como sabemos, onde tem responsabilidade tem risco e onde tem risco tem seguro.
-                            As companhias de seguros, vendo a nova lei, criaram o Seguro Cyber, que será o responsável por proteger empresas de todo território nacional. Pensando nisso, separamos 9 coberturas do seguro para você conhecer bem e não ser surpreendido:
-
+                        <h1 style="margin-bottom:0"><a href="/lgpd-seguros"
+                                style="color: #333333;font-size: 24px;text-transform: uppercase;font-family: lato;">Oportunidades
+                                que a LGPD abrirá para o Corretor de Seguros</a></h1>
+                        <spam style="font-size: 16px; opacity: 0.5;">Publicado em 19 de Junho de 2019</spam>
+                        <img src="img/lgpd-seguros.jpg" class="img-responsive" style="width: 100%; margin-top: 39px">
+                        <p style="font-size: 16px; line-height: 32px; margin-top: 22px">A sigla LGPD é adotada para
+                            designar a Lei Geral de Proteção de Dados (Lei nr 13.709), que foi sancionada em 14 de
+                            agosto de 2018 e que entra em vigor a partir de fevereiro de 2020. Seu principal objetivo é
+                            garantir transparência no uso dos dados das pessoas físicas em quaisquer meios. Esta lei
+                            chega para alterar a Lei nr 12.965, de 23 de abril de 2014, popularmente chamada de Marco
+                            Civil da Internet que regulava estas transações até então.
+                            Com a lei vigorando, abre-se uma ótima oportunidade para o corretor de seguros. As empresas
+                            terão responsabilidade com os dados fornecidos por pessoas físicas (clientes, fornecedores e
+                            funcionários). Como sabemos, onde tem responsabilidade tem risco e onde tem risco tem
+                            seguro.
+                            As companhias de seguros, vendo a nova lei, criaram o Seguro Cyber, que será o responsável
+                            por proteger empresas de todo território nacional. Pensando nisso, separamos 9 coberturas do
+                            seguro para você conhecer bem e não ser surpreendido:
                             <br><br>
-                    </div>
-                    <div class=" col-md-12 center" style="background-color: #EA7B25; margin-bottom: 40px">
-                        <h4 style="color: #fff; text-align: center">VOCÊ JÁ VAI? :( <br>
-                            Assine a newsletter e receba E-BOOK EXCLUSIVO com "LGPD: onde a lei pode me afetar?"</h4>
-                        <form action="/leads" method="POST">
-                            <div class="input-field col-md-6">
-                                <input id="nome" required name="lead[name]" placeholder=" Nome completo" type="text"
-                                    class="validate" style="background-color:#fff !important;">
-                            </div>
-                            <div class="input-field col-md-6">
-                                <input id="email" required name="lead[email]" placeholder=" E-mail" type="email" class="validate"
-                                    style="background-color:#fff !important;">
-                            </div>
-                            <div class="col-md-12" style="text-align: center">
-                                <input id="myIp" name="lead[myIp]" type="hidden" value="">
-                                <button type="submit" class="waves-effect waves-light btn"
-                                    style="background-color: #ffff00; color: #000; border: 0 !important; margin: 10px;"><b>Enviar</b></button>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-md-12">
-                        <p style="font-size:16px;">
-                            Com a lei vigorando, abre-se uma ótima oportunidade para o corretor de seguros. As empresas terão responsabilidade com os dados fornecidos por pessoas físicas (clientes, fornecedores e funcionários). Como sabemos, onde tem responsabilidade tem risco e onde tem risco tem seguro.
+                            Com a lei vigorando, abre-se uma ótima oportunidade para o corretor de seguros. As empresas
+                            terão responsabilidade com os dados fornecidos por pessoas físicas (clientes, fornecedores e
+                            funcionários). Como sabemos, onde tem responsabilidade tem risco e onde tem risco tem
+                            seguro.
                             <br>
-                            
-                            As companhias de seguros, vendo a nova lei, criaram o Seguro Cyber, que será o responsável por proteger empresas de todo território nacional. Pensando nisso, separamos 9 coberturas do seguro para você conhecer bem e não ser surpreendido:
+
+                            As companhias de seguros, vendo a nova lei, criaram o Seguro Cyber, que será o responsável
+                            por proteger empresas de todo território nacional. Pensando nisso, separamos 9 coberturas do
+                            seguro para você conhecer bem e não ser surpreendido:
                             <br>
-                            
+
                             <h2 style="font-size:18px;">1. Responsabilidade por Dados Pessoais e Corporativos:</h2>
-                            A divulgação pública de dados privados que estão sob custódia da sociedade e a divulgação pública de dados corporativos de um terceiro (orçamentos, listas de clientes, planos de marketing etc) ou informações profissionais de um terceiro que estejam sob custódia da sociedade e sejam confidenciais.
+                            A divulgação pública de dados privados que estão sob custódia da sociedade e a divulgação
+                            pública de dados corporativos de um terceiro (orçamentos, listas de clientes, planos de
+                            marketing etc) ou informações profissionais de um terceiro que estejam sob custódia da
+                            sociedade e sejam confidenciais.
                             <br>
-                            
-                            <h2 style="font-size: 18px;">2. Responsabilidade pela Segurança de Dados Ato, erro ou omissão que resulte em:</h2>
+
+                            <h2 style="font-size: 18px;">2. Responsabilidade pela Segurança de Dados Ato, erro ou
+                                omissão que resulte em:</h2>
                             <ul>
-                                <li>Contaminação de dados de terceiro por software não autorizado ou código malicioso (vírus);</li>
+                                <li>Contaminação de dados de terceiro por software não autorizado ou código malicioso
+                                    (vírus);</li>
                                 <li>Negação de acesso inadequada para o acesso de um terceiro autorizado aos dados;</li>
-                                <li>Roubo ou furto de código de acesso nas instalações da sociedade ou via sistema de computador;</li>
-                                <li>Destruição, modificação, corrupção e eliminação de dados armazenados em qualquer sistema de computador;</li>
+                                <li>Roubo ou furto de código de acesso nas instalações da sociedade ou via sistema de
+                                    computador;</li>
+                                <li>Destruição, modificação, corrupção e eliminação de dados armazenados em qualquer
+                                    sistema de computador;</li>
                                 <li>Roubo ou furto físico de hardware da empresa por um terceiro;</li>
                                 <li>Divulgação de dados devido a uma violação de segurança de dados.</li>
-                            </ul> 
+                            </ul>
 
                             <h2 style="font-size:18px;">3. Responsabilidade por Empresas Terceirizada</h2>
-                            Violação de informação pessoal que resulte em uma reclamação contra uma empresa terceirizada pelo processamento ou coleta de dados pessoais em nome da sociedade e pelos quais a sociedade é responsável.
+                            Violação de informação pessoal que resulte em uma reclamação contra uma empresa terceirizada
+                            pelo processamento ou coleta de dados pessoais em nome da sociedade e pelos quais a
+                            sociedade é responsável.
                             <br>
 
                             <h2 style="font-size:18px;">4. Custos de Defesaa</h2>
-                            Honorários advocatícios e custas judiciais incorridos exclusivamente da defesa ou recurso de um procedimento civil, regulatório, administrativo ou criminal.
+                            Honorários advocatícios e custas judiciais incorridos exclusivamente da defesa ou recurso de
+                            um procedimento civil, regulatório, administrativo ou criminal.
                             <br>
 
                             <h2 style="font-size:18px;">5. Investigação</h2>
-                            Os honorários, custos e gastos razoáveis que o Segurado incorra para o assessoramento legal e a representação relacionados a uma investigação. 
+                            Os honorários, custos e gastos razoáveis que o Segurado incorra para o assessoramento legal
+                            e a representação relacionados a uma investigação.
                             <br>
 
                             <h2 style="font-size:18px;">6. Sanções Administrativas</h2>
-                            As Sanções Administrativas que a sociedade seja obrigada a pagar relacionadas a uma investigação.
+                            As Sanções Administrativas que a sociedade seja obrigada a pagar relacionadas a uma
+                            investigação.
                             <br>
 
                             <h2 style="font-size:18px;">7. Restituição de Imagem da Sociedade e Pessoal</h2>
-                            Custos e despesas para mitigar os danos à reputação em consequência de uma reclamação coberta pela apólice.
+                            Custos e despesas para mitigar os danos à reputação em consequência de uma reclamação
+                            coberta pela apólice.
                             <br>
 
                             <h2 style="font-size:18px;">8. Notificação e Monitoramento </h2>
                             Custos incorridos para a notificação de uma violação de dados aos usuários.
                             <br>
 
-                            <h2 style="font-size:18px;">9. Dados Eletrônicos  </h2>
-                            No caso de uma ‘’Violação de Dados de Segurança’’, estão cobertos os custos para determinar se os dados eletrônicos podem ser ou não restaurados, restabelecidos ou recriados, e os custos para restaurar, restabelecer ou recriar tais dados eletrônicos, quando possível.
+                            <h2 style="font-size:18px;">9. Dados Eletrônicos </h2>
+                            No caso de uma ‘’Violação de Dados de Segurança’’, estão cobertos os custos para determinar
+                            se os dados eletrônicos podem ser ou não restaurados, restabelecidos ou recriados, e os
+                            custos para restaurar, restabelecer ou recriar tais dados eletrônicos, quando possível.
                             <br>
                             <br>
-                            Conseguiu enxergar a oportunidade e agora precisa conhecer mais sobre a LGDP? Baixe nosso e-book, com todas as informações sobre a LGPD.
-
-
+                            Conseguiu enxergar a oportunidade e agora precisa conhecer mais sobre a LGDP? Baixe nosso
+                            e-book, com todas as informações sobre a LGPD.
                         </p>
                     </div>
 
                 </div>
                 <div class="col-md-3">
                     <div class="tt-sidebar-wrapper">
-                        <div class="" style="background-color: #EA7B25; margin-bottom: 40px; text-align: center">
-                            <div class="col-md-12">
-                                <h4 style="color: #fff; text-align: center">Assine e receba dicas e novidades
-                                </h4>
-                            </div>
+                        <div class="col-md-12"
+                            style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;">
+                            <h1
+                                style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                Newsletter </h1>
+                            <spam>Preencha os campos abaixo e receba dicas e novidades</spam>
+
                             <form action="/leads" method="POST">
-                                <div class="input-field col-md-12">
-                                    <input id="nomepg" required name="lead[name]" placeholder=" Nome completo" type="text"
-                                        class="validate" style="background-color:#fff !important;">
+                                <div class="input-field col-md-12" style="margin-top: 30px;">
+                                    <input id="nomepg" required="" name="lead[name]" placeholder=" Nome completo"
+                                        type="text" class="validate" style="background-color:#fff !important;">
                                 </div>
-                                <div class="input-field col-md-12">
-                                    <input id="emailpg" required name="lead[email]" placeholder=" E-mail" type="email"
-                                        class="validate" style="background-color:#fff !important;">
+                                <div class="input-field col-md-12" style="margin-top: 0;">
+                                    <input id="emailpg" required="" name="lead[email]" placeholder=" E-mail"
+                                        type="email" class="validate" style="background-color:#fff !important;">
                                 </div>
                                 <input id="myIp" name="lead[myIp]" type="hidden" value="">
-                                <button type="submit" class="waves-effect waves-light btn"
-                                    style="background-color: #ffff00; color: #000; border: 0 !important; margin: 10px; text-align: center"><b>Enviar</b></button>
+                                <button type="submit" class="waves-effect waves-light"
+                                    style="background-color: #EA7B25;border: 0 !important;color: #fff;text-transform: uppercase;width: 200px;height: 33px;text-align: center;padding-top: 2px;font-weight: bold;margin-bottom: 40px;"><b>quero
+                                        receber!</b></button>
                             </form>
+
+                            <div class="col-md-12" style="margin-bottom: 15px;">
+                                <h1
+                                    style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;font-size: 24px;MARGIN: 0;">
+                                    SIGA-NOS</h1>
+                                <a href="https://www.facebook.com/nuveminfoblog/"
+                                    style="font-size: 25px; color: #333333; margin: 10px;"><i
+                                        class=" fa fa-facebook"></i></a>
+                                <a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"
+                                    style="font-size: 25px; color: #333333; margin: 10px;"><i
+                                        class=" fa fa-instagram"></i></a>
+                            </div>
+
                         </div>
-                        <div class="widget widget_categories">
-                            <h3>Últimos posts</h3>
+                        <div class="col-md-12"
+                            style="background-color: #F4F4F4;margin-bottom: 40px;text-align: center;height: 100%;">
+
+                            <h1
+                                style="color: #333333;font-family: lato;text-transform: uppercase;text-align: center;margin-top: 38px;font-size: 24px;">
+                                PUBLICAÇÕES RECENTES
+                            </h1>
                             <ul>
-                                <li><a href="/computacao-em-nuvem">O que é Computação em Nuvem (Cloud Computing)?</a>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/o-que-vai-mudar-no-marketing" style="color: #333333;"> LGPD: O que vai mudar no marketing?</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 21 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><a href="/o-que-e-lgpd">Entendendo a LGPD Lei Geral de Proteção de Dados</a></li>
-                                <li><a href="/como-criar-lgpd">Mudanças com a LGPD no Brasil</a></li>
-                                <li><a href="/lgpd-seguros">Oportunidades que a LGPD abrirá para o Corretor de Seguros</a></li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/avanco-cloud-empresas" style="color: #333333;"> O avanço do Cloud nas empresas</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 21 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/nova-lei-afeta-empresas" style="color: #333333;"> Como a nova lei de proteção de dados afeta o dia a dia das empresas</a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 20 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
+                                <hr>
+                                <li>
+                                    <div class="row">
+                                        <div class="col-md-12" style="text-align: left;">
+                                            <h1 style="font-size: 17px; margin-bottom: 0; font-family: lato;"><i
+                                                    class="fa fa-chevron-right" style="color: #F78229;"></i><a
+                                                    href="/lgpd-seguros" style="color: #333333;"> Oportunidades que a LGPD
+                                                    abrirá para o Corretor de Seguros</a><a></a></h1>
+                                            <spam style="font-size: 12px; opacity: 0.5;">Publicado em 16 de junho de
+                                                2019</spam>
+                                        </div>
+                                    </div>
+                                </li>
                             </ul>
-                        </div><!-- /.widget_categories -->
+                        </div>
                     </div><!-- /.tt-sidebar-wrapper -->
                 </div>
             </div>
@@ -280,37 +350,77 @@ getIp(function (ip) {
     </section>
 
     <footer class="footer footer-four" style="background-color: #EA7B25;">
+        <div style="background-color: #333">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container" style="margin: 60px;">
+                        <div class="col-md-6" style="text-align: left;">
+                            <h1
+                                style="color: #F78229;font-family: lato; font-size: 24px;margin-top: 0;text-transform: uppercase;">
+                                Newsletter</h1>
+                            <h2 style="color: #FFF;font-size: 20px; line-height: 24px;">Preencha os campos abaixo e
+                                receba <br> nossa
+                                newsletter com dicas e novidades</h2>
+                        </div>
+                        <div class="col-md-6">
+                            <form action="/leads" method="POST">
+                                <div class="input-field col-md-6">
+                                    <input id="nomepg" required name="lead[name]" placeholder=" Nome completo"
+                                        type="text" class="validate" style="background-color:#fff !important;">
+                                </div>
+                                <div class="input-field col-md-6">
+                                    <input id="emailpg" required name="lead[email]" placeholder=" Seu melhor e-mail"
+                                        type="email" class="validate" style="background-color:#fff !important;">
+                                    <input id="myIp" name="lead[myIp]" type="hidden" value="">
+                                </div>
+                                <div class="input-field col-md-12">
+                                    <button type="submit" class="waves-effect waves-light"
+                                        style="background-color: #EA7B25;border: 0 !important;color: #fff;text-transform: uppercase;width: 100%;height: 33px;text-align: center;padding-top: 2px;font-weight: bold;margin-bottom: 40px;"><b>quero
+                                            receber!</b></button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
         <div class="primary-footer brand-bg text-center">
             <div class="container">
-
                 <a href="#top"
                     class="page-scroll btn-floating btn-large back-top waves-effect waves-light tt-animate btt"
                     style="background-color: #333" data-section="#top">
                     <i class="fa fa-chevron-up"></i>
                 </a>
-                <a href="malito:contato@nuveminfo.com.br">
-                    <p style="margin-top: 10px; color: #fff">contato@nuveminfo.com.br </p>
-                </a>
-                <ul class="social-link tt-animate ltr mt-20">
-                    <li><a href="https://www.facebook.com/nuveminfoblog/"><img src="img/facebook_branco.svg"
-                                class="facebook_branco"></a></li>
-                    <li><a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"><img
-                                src="img/001-instagram.svg" class="-instagram"></a></li>
-                </ul>
+                <div class="col-md-12" style="margin: 60px 0 60px 0;">
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">CONTATO</h1>
+                        <a href="malito:contato@nuveminfo.com.br" style="font-size: 18px; margin-top: 21px;">
+                            <p style="margin-top: 10px; color: #fff">contato@nuveminfo.com.br </p>
+                        </a>
+                    </div>
+                    <div class="col-md-4" style="text-align: left">
+                        <h1 style="color: #333333; font-size: 22px; font-family: lato;">SIGA-NOS NAS REDES SOCIAIS</h1>
+                        <ul class="social-link tt-animate ltr mt-20">
+                            <li><a href="https://www.facebook.com/nuveminfoblog/"><img src="img/facebook_branco.svg"
+                                        class="facebook_branco"></a></li>
+                            <li><a href="https://instagram.com/nuveminfoblog?igshid=1oq25z44eq06p"><img
+                                        src="img/001-instagram.svg" class="-instagram"></a></li>
+                        </ul>
+                    </div>
 
-                <hr class="mt-15">
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-logo">
-                            <img src="img/logo_nuvem_wt.png" alt="" style="width: 20%;">
-                        </div>
-
-                        <span class="copy-text">Nuvem Info 2019 - Todos os direitos reservados</span>
-                    </div><!-- /.col-md-12 -->
-                </div><!-- /.row -->
+                    <div class="col-md-4" style="text-align: center;">
+                        <img src="img/logo_nuvem_wt.png" alt="" style="width: 55%;margin-top: 23px;">
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-bottom: 10px;">
+                    <span class="copy-text" style="color: #fff !important;">Nuvem Info 2019 - Todos os direitos
+                        reservados</span>
+                </div><!-- /.col-md-12 -->
+                <!-- /.row -->
             </div><!-- /.container -->
-        </div><!-- /.primary-footer -->
+        </div>
 
 
     </footer>
