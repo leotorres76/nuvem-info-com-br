@@ -27,12 +27,24 @@ app.get('/como-criar-lgpd', (req, res) => {
     res.sendFile(__dirname + '/public/como-criar-lgpd.html');
 });
 
+app.get('/nova-lei-afeta-empresas', (req, res) => {
+    res.sendFile(__dirname + '/public/nova-lei-afeta-empresas.html');
+});
+
+app.get('/o-que-vai-mudar-no-marketing', (req, res) => {
+    res.sendFile(__dirname + '/public/o-que-vai-mudar-no-marketing.html');
+});
+
 app.get('/lgpd-seguros', (req, res) => {
     res.sendFile(__dirname + '/public/lgpd-seguros.html');
 });
 
-app.get('/lista', (req, res) => {
-    res.sendFile(__dirname + '/public/lista.html');
+app.get('/avanco-cloud-empresas', (req, res) => {
+    res.sendFile(__dirname + '/public/avanco-cloud-empresas.html');
+});
+
+app.get('/pag-2', (req, res) => {
+    res.sendFile(__dirname + '/public/pag-2.html');
 });
 
 app.get('/obrigado', (req, res) => {
