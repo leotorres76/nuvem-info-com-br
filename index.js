@@ -55,6 +55,10 @@ app.get('/obrigado', (req, res) => {
     res.sendFile(__dirname + '/public/obrigado.html');
 });
 
+app.get('/sitemap', (req, res) => {
+    res.sendFile(__dirname + '/public/sitemap.xml');
+});
+
 app.post('/leads', (req, res) => {
     const name = req.body.lead.name; //pega o campo name do form e leva pro Lead.js
     const email = req.body.lead.email; //pega o campo email do form e leva pro Lead.js
