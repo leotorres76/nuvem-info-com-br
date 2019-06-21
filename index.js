@@ -47,6 +47,10 @@ app.get('/pag-2', (req, res) => {
     res.sendFile(__dirname + '/public/pag-2.html');
 });
 
+app.get('/onde-a-lei-pode-te-afetar', (req, res) => {
+    res.sendFile(__dirname + '/public/onde-a-lei-pode-te-afetar.html');
+});
+
 app.get('/obrigado', (req, res) => {
     res.sendFile(__dirname + '/public/obrigado.html');
 });
