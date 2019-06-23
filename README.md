@@ -1,6 +1,6 @@
 # <a href="http://nuveminfo.com.br">Blog Nuvem Info</a>
 
-Site criado utilizando DOM e consumo de API
+Site criado utilizando Node.JS | Express.JS | Firebase
 
 ## Descrição
 
