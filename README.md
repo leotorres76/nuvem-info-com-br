@@ -13,5 +13,5 @@ Blog de conteúdo informativo na área de TI contendo:
 - Posts
 - Formulário de cadastro com persistência em Firebase
 - Download de arquivo .pdf
-- Função para criar arquvio em CSV com os dados do Firebase. (nuveminfo.com.br/leads.csv)
+- Função para criar arquivo em CSV com os dados do Firebase. (nuveminfo.com.br/leads.csv)
 - Rodapé
