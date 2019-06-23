@@ -4,7 +4,7 @@ Site criado utilizando DOM e consumo de API
 
 ## Descrição
 
-<img src="" />
+<img src="../assets/nuvem-info-blog.png" height="50%" width="50%" />
 
 Blog de conteúdo informativo na área de TI contendo: 
 
